@@ -1,0 +1,389 @@
+/* General body styles */
+body {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Input group styles */
+.input-group .form-control::placeholder {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+}
+.input-group .input-group-text {
+    background-color: transparent;
+    border-right: 0;
+}
+.input-group .form-control {
+    border-left: 0;
+    height: 60px;
+}
+.input-group .form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+.input-group .input-group-text i {
+    color: #6c757d;
+}
+
+/* Footer styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #042d97;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.logo-section {
+    margin-right: 20px; /* Jarak antara logo section dan section lainnya */
+    margin-left: 40px;
+}
+
+.pages-section,
+.utility-section {
+    margin-left: 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 50px; /* Sesuaikan lebar sesuai kebutuhan */
+    height: auto;
+    margin-right: 10px;
+}
+
+.footer-text {
+    margin-top: 10px;
+}
+
+.footer-text-geser {
+    margin-left: 35px;
+}
+
+.footer-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-hr {
+    margin: 10px 0;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.logo-text {
+    margin-top: 0; /* Remove the margin-top for the logo text */
+}
+
+.footer-heading {
+    font-weight: bold;
+}
+
+/* Custom heading styles */
+.custom-heading {
+    background: linear-gradient(
+        to right,
+        rgba(5, 88, 164, 1),
+        rgba(2, 33, 62, 1)
+    ); /* Gradien dari biru terang ke biru gelap */
+    color: white; /* Agar teksnya terlihat di atas background biru */
+    position: relative;
+    padding: 10px 10px 10px 40px; /* Padding kiri lebih besar untuk menghindari garis kuning */
+    margin: 0; /* Menghapus margin default dari elemen h4 */
+    display: block; /* Membuat elemen h4 sebagai blok */
+}
+
+.custom-heading::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px; /* Lebar garis kuning */
+    height: 100%; /* Tinggi garis kuning mengikuti tinggi elemen */
+    background-color: rgba(250, 171, 54, 1);
+}
+
+.full-width {
+    width: 100%;
+    box-sizing: border-box; /* Memastikan padding tidak menambah lebar total elemen */
+}
+
+/* Form check input styles */
+.form-check-input {
+    border: 2px solid black; /* Warna border hitam */
+}
+
+.form-check-input:checked {
+    background-color: black; /* Opsional: Jika ingin mengganti warna background ketika checkbox di centang */
+}
+
+.form-check-input:focus {
+    border-color: black; /* Warna border hitam saat fokus */
+    box-shadow: none; /* Menghapus shadow default saat fokus */
+}
+
+/* Card tracer study styles */
+.card-tracer-study {
+    box-shadow: 0px 17px 50px 0px rgba(179, 179, 179, 0.3); /* Shadow sesuai dengan desain */
+    transition: box-shadow 0.3s ease; /* Efek transisi saat hover */
+    margin-bottom: 100px; /* Menambahkan margin bawah agar tidak menempel ke footer */
+    border-radius: 40px;
+    background: linear-gradient(
+        180deg,
+        rgba(242, 242, 242, 0.94902) 0%,
+        rgba(208, 208, 219, 0.94902) 100%
+    );
+}
+
+.card:hover {
+    box-shadow: 0px 25px 70px 0px rgba(179, 179, 179, 0.4); /* Shadow lebih besar saat hover untuk efek realistis */
+}
+
+.card-body {
+    padding: 40px; /* Padding sesuai desain */
+}
+
+/* Button styles */
+.btn-save {
+    background-color: rgba(51, 85, 171, 1); /* Warna background sesuai desain */
+    color: white; /* Warna teks */
+    border: none; /* Menghapus border default */
+    width: 196px;
+    height: 50px;
+}
+
+.btn-save:hover {
+    background-color: rgba(51, 85, 171, 0.8); /* Warna background saat hover */
+}
+
+.btn-save i {
+    margin-right: 8px; /* Jarak antara ikon dan teks */
+}
+
+/* Alert styles */
+.alert-no-bg {
+    background-color: transparent;
+    border-color: red;
+    color: red;
+    max-width: 75%;
+}
+
+/* Custom profile styles */
+.custom-heading-profile {
+    background: linear-gradient(
+        to right,
+        rgba(5, 88, 164, 1),
+        rgba(2, 33, 62, 1)
+    ); /* Gradien dari biru terang ke biru gelap */
+    color: white; /* Agar teksnya terlihat di atas background biru */
+    position: relative;
+    padding: 10px 10px 10px 40px; /* Padding kiri lebih besar untuk menghindari garis kuning */
+    margin: 0 -40px 10px -40px; /* Menghapus margin default dari elemen h4 dan menambahkan margin negatif */
+    display: block; /* Membuat elemen h4 sebagai blok */
+}
+
+.custom-heading-profile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px; /* Lebar garis kuning */
+    height: 100%; /* Tinggi garis kuning mengikuti tinggi elemen */
+    background-color: rgba(250, 171, 54, 1);
+}
+
+.full-width-profile {
+    width: calc(100% + 80px);
+    box-sizing: border-box; /* Memastikan padding tidak menambah lebar total elemen */
+    margin-left: -40px; /* Menambah margin negatif untuk mengimbangi padding */
+}
+
+.card-body-profile {
+    padding: 20px 40px; /* Menyesuaikan padding agar sesuai dengan margin heading */
+}
+.card-profile {
+    margin-bottom: 100px;
+    box-shadow: 0px 17px 50px 0px rgba(179, 179, 179, 0.3); /* Shadow sesuai dengan desain */
+    transition: box-shadow 0.3s ease; /* Efek transisi saat hover */
+}
+
+/* Owl carousel styles */
+.owl-carousel .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.owl-carousel .item .row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    width: 100%;
+}
+
+.owl-carousel .item .col-md-4 {
+    padding: 10px;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+.owl-dot.active {
+    background-color: #000;
+}
+
+/* Card loker styles */
+.equal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #f9f9f9;
+    border-radius: 30px;
+    padding: 10px; /* Kurangi padding lebih jauh untuk mendekatkan konten dengan border card */
+    margin-right: 75px; /* Gunakan margin yang lebih kecil untuk jarak antar card bersebelahan */
+}
+
+.equal-card .card-body {
+    padding: 15px; /* Tambahkan padding kecil pada card-body jika diperlukan */
+}
+
+.equal-card-beranda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #f9f9f9;
+    border-radius: 30px;
+    padding: 10px; /* Kurangi padding lebih jauh untuk mendekatkan konten dengan border card */
+    margin-right: 75px; /* Gunakan margin yang lebih kecil untuk jarak antar card bersebelahan */
+    height: 100%; /* Pastikan card menggunakan tinggi penuh dari kontainer */
+}
+
+.equal-card .card-body-beranda {
+    padding: 15px; /* Tambahkan padding kecil pada card-body jika diperlukan */
+}
+
+/* Navbar styles */
+.navbar-brand .logo {
+    width: 60px;
+    height: 60px;
+}
+
+.navbar-nav .nav-link {
+    padding: 0.7rem 1rem;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.nav-link.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    padding: 0; /* Remove default padding */
+}
+
+.profile-name {
+    line-height: 50px; /* Match the height of the profile picture */
+}
+
+@media (max-width: 768px) {
+    .navbar-brand .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar-brand div {
+        font-size: 0.9rem;
+    }
+
+    .profile-pic {
+        width: 40px;
+        height: 40px;
+    }
+
+    .profile-name {
+        line-height: 40px; /* Match the height of the profile picture */
+    }
+}
+
+/* Menu - Navbar Card */
+.navbar-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 10px;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.2
+    ); /* White background with 80% opacity */
+    border-radius: 20px;
+}
+
+.navbar-card .nav-item {
+    margin: 0 5px; /* Margin between nav items */
+}
+
+.navbar-card .nav-link {
+    color: #000; /* Black text color */
+    padding: 5px 10px; /* Padding inside the link */
+    border-radius: 5px; /* Slight rounding for the link */
+    transition: background 0.3s; /* Smooth transition for background color */
+}
+
+.navbar-card .nav-link:hover,
+.navbar-card .nav-link.active {
+    background: rgba(
+        0,
+        0,
+        0,
+        0.1
+    ); /* Slightly darker background on hover or when active */
+    color: #000; /* Ensure the text remains black */
+}
+
+/* Article image styles */
+.article-image {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Background image styles */
+
+/* Ensure container is above background image */
