@@ -10,9 +10,9 @@
                 <h4 class="custom-heading-profile full-width-profile">Profile</h4>
                 <!-- Profile Picture -->
                 <div class="d-flex align-items-center mb-4" style="padding: 20px;">
-                    <img src="{{ $user->profile_photo_url ?? asset('image/profile.jpg') }}" class="rounded-circle" style="width: 70px; height: 70px; margin-right: 20px;" alt="Profile Picture">
+                    <img src="{{ $user->image_path ?? asset('image/profile.jpg') }}" class="rounded-circle" style="width: 70px; height: 70px; margin-right: 20px;" alt="Profile Picture">
                     <div>
-                        <h5 class="mb-0"><b>{{ $user->name ?? 'Nama Lengkap' }}</b></h5>
+                        <h5 class="mb-0"><b>{{ $user->nama ?? 'Nama Lengkap' }}</b></h5>
                         <p class="mb-0">{{ $user->email ?? 'example@untirta.ac.id' }}</p>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                 <div class="row mb-4">
                     <div class="form-group col-md-6">
                         <label for="name">Nama Lengkap</label>
-                        <input type="text" class="form-control" id="name" name="name" value="{{ $user->name ?? '' }}" disabled />
+                        <input type="text" class="form-control" id="name" name="name" value="{{ $user->nama ?? '' }}" disabled />
                     </div>
                     <div class="form-group col-md-6">
                         <label for="nim">NIM</label>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="tahun_lulus">Tahun Lulus</label>
-                        <input type="text" class="form-control" id="tahun_lulus" name="tahun_lulus" value="{{ $user->tahun_lulus ?? '' }}" disabled />
+                        <input type="text" class="form-control" id="tahun_lulus" name="tahun_lulus" value="{{$user->survey->tahun_lulus ?? 'belum mengisi' }}" disabled />
                     </div>
                 </div>
                 

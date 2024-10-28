@@ -1,0 +1,461 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "figtree", sans-serif;
+}
+
+textarea {
+    height: 10rem;
+}
+
+:root {
+    --color-primary: #ff2d20;
+    --color-primary-lighter: #f83f35;
+    --color-dark: #252a37;
+    --color-white: #ffffff;
+    --color-slightly-white: #fbfbfd;
+    --color-gray: #cccccc;
+}
+
+body {
+    background-color: var(--color-white);
+}
+
+/* table */
+.id-column {
+    width: 2%; /* Set a fixed width for the title column */
+}
+
+.title-column {
+    /* text-wrap: wrap; */
+    word-break: break-all;
+    /* word-wrap: break-word; */
+    width: 10ch;
+    max-width: 50ch; /* Set a fixed width for the title column */
+}
+
+.content-column {
+    /* word-wrap: break-word; */
+    word-break: break-all;
+    /* text-wrap: wrap; */
+    /* word-break: break-all; */
+    width: 40ch;
+    max-width: 70ch; /* Set a fixed width for the title column */
+}
+
+.action-column {
+    width: 1%; /* Set a fixed width for the action column */
+}
+#mytable {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+    /* word-wrap: break-word;
+    text-wrap: wrap; */
+}
+
+.mytabletitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+#mytable td,
+#mytable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#mytable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#mytable tr:hover {
+    background-color: #ddd;
+}
+
+#mytable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.editdeletebtn {
+    cursor: pointer;
+    display: flex;
+    color: var(--color-dark);
+    text-decoration: none;
+    color: var(--color-yellow-edit);
+    align-items: center;
+    all: unset;
+    flex-direction: column;
+    text-wrap: nowrap;
+}
+.editdeletebtn:hover {
+    color: var(--color-primary);
+}
+
+.editdeletebtn:hover span {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* sidebar */
+.sidebar {
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: var(--color-slightly-white);
+    padding: 0.4rem 0.8rem;
+    transition: all 0.2s ease;
+    z-index: 10; /* Added to ensure the sidebar is above other content */
+}
+
+.sidebar.active ~ .main-content {
+    margin-left: 250px; /* Changed from left to margin-left */
+    width: calc(100% - 250px);
+}
+
+.sidebar.active {
+    width: 250px;
+}
+
+.sidebar #menubtn {
+    position: absolute;
+    top: 0.4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #menubtn {
+    left: 90%;
+}
+
+.sidebar .top .logo {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: x-large;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    min-width: 20ch;
+    align-items: center;
+    pointer-events: none;
+    margin-left: 1.1rem;
+    opacity: 0;
+}
+
+.sidebar.active .top .logo {
+    opacity: 1;
+}
+
+.top .logo {
+    font-size: 1.4rem;
+    margin-right: 5px;
+}
+
+.sidebar p {
+    opacity: 0;
+}
+
+.sidebar.active p {
+    opacity: 1;
+}
+
+.sidebar ul li {
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    margin-top: 0.8rem;
+    line-height: 50px;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-dark);
+    border-radius: 0.8rem;
+}
+
+.sidebar ul li:hover {
+    background-color: white;
+    color: var(--color-dark);
+}
+
+.sidebar ul li:hover a {
+    color: black;
+}
+
+.sidebar ul li a i {
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    color: var(--color-primary);
+    line-height: 50px;
+}
+
+.sidebar .nav-item {
+    display: none;
+}
+
+.sidebar.active .nav-item {
+    min-width: 250px;
+    display: block;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.6rem;
+    padding: 0.4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    background-color: var(--color-white);
+    display: none;
+}
+
+.sidebar ul li:hover .tooltip {
+    display: block;
+}
+
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+
+.sidebar ~ .main-content {
+    position: relative;
+
+    top: 0;
+    margin-left: 80px; /* Changed from left to margin-left */
+    transition: all 0.2s ease;
+    width: calc(100% - 80px);
+    padding: 1rem;
+}
+
+
+/* pagination */
+/* Add this to your existing CSS file */
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination li a,
+.pagination li span {
+    display: block;
+    padding: 8px 16px;
+    color: var(--color-dark);
+    background-color: var(--color-slightly-white);
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination li a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.pagination li.active span {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.pagination li.disabled span,
+.pagination li.disabled a {
+    color: var(--color-dark);
+    background-color: var(--color-slightly-white);
+    cursor: not-allowed;
+}
+
+/* create form */
+
+.form-container .form input {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container .form #content {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.redbtn {
+    padding: 0.7em;
+    background-color: var(--color-primary);
+    border: none;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.redbtn#search {
+    font-size: 0.84rem;
+}
+.redbtn:hover {
+    background-color: var(--color-primary-lighter);
+}
+
+/* search input */
+.search-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 1rem;
+}
+.search-container #myinput {
+    padding: 0.5rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+}
+
+/* login form */
+.login-form .form-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.1rem;
+}
+
+.login-form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 500px;
+    height: 90vh;
+    row-gap: 1rem;
+}
+
+.login-form input {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+@media (max-width: 576px) {
+    .login-form {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+        width: 100%;
+        height: 90vh;
+        row-gap: 1rem;
+    }
+}
+
+/* chart */
+.chart-grid {
+    display: grid;
+   
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 2em;
+}
+.chart-container {
+    margin: auto;
+    width: 992px;
+}
+@media (max-width: 992px) {
+    .chart-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2em;
+    }
+    .chart-container {
+    margin: auto;
+    width: 100%;
+}
+}
+
+
+#container {
+    height: 500px;
+    min-width: 310px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.chart-grid div {
+    border: 2px solid var(--color-gray);
+    border-radius: 5px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* survey tracker */
+
+
+.tracker ul li {
+    list-style: none;
+}
+.tracker ul li p {
+    font-weight: lighter;
+    color: var(--color-dark);
+}
+.tracker {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 2em;
+    border: none;
+}
+
+.tracker ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.tracker{
+    border: 2px solid var(--color-gray);
+    border-radius: 5px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

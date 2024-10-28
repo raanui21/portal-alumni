@@ -45,7 +45,7 @@
                             </h2>
                         </figcaption>
                     </figure>
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('user.login') }}">
                         @csrf
                         <div class="mb-3 input-group">
                             <span class="input-group-text">
@@ -55,7 +55,7 @@
                                 type="text"
                                 class="form-control @error('nim') is-invalid @enderror"
                                 id="nim"
-                                name="nim"
+                                name="email"
                                 placeholder="Nim"
                                 value="{{ old('nim') }}"
                                 required

@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
+    {{-- Chart Js --}}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">

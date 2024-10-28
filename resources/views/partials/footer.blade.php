@@ -26,16 +26,16 @@
       <div class="footer-heading">Pages</div>
       <hr class="footer-hr">
       <div class="footer-text">
-          <a href="/frontoffice/beranda" class="footer-link">Beranda</a>
+          <a href="/home" class="footer-link">Beranda</a>
       </div>
       <div class="footer-text">
-          <a href="#" class="footer-link">Alumni</a>
+          <a href="/statistic" class="footer-link">Alumni</a>
       </div>
       <div class="footer-text">
-          <a href="/frontoffice/untirta-karir" class="footer-link">Untirta Karir</a>
+          <a href="/career" class="footer-link">Untirta Karir</a>
       </div>
       <div class="footer-text">
-          <a href="/frontoffice/tracer-study" class="footer-link">Isi Kuisioner</a>
+          <a href="/tracer-study" class="footer-link">Isi Kuisioner</a>
       </div>
   </div>
   <div class="footer-section utility-section">
