@@ -50,9 +50,9 @@ class UserSeeder extends Seeder
         ]);
         User::create([
             "id" => Str::uuid(),
-            "email" => "3337210022@untirta.ac.id",
-            "email_pribadi" => "rakapengenturu@turu.com",
-            "nama" => "raka adi prasetya",
+            "email" => "",
+            "email_pribadi" => "",
+            "nama" => "",
             "role" => 'alumni',
             'agama'=>'islam',
             'nim' => 3,
